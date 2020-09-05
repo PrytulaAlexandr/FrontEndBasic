@@ -1,0 +1,135 @@
+html,body{
+    height: 100%;
+    background-color: grey;
+}
+
+.header {
+    height: 60px;
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: linear-gradient(90deg, black, red);
+    margin: 10px auto;
+}
+
+.logo {
+    position: relative;
+    border: 3px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    display: inline-block;
+    color: white;
+    margin: 10px;
+    animation-name: run;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: 5;
+    animation-timing-function: ease;
+}
+
+@keyframes run{
+    0%   {
+        background-color:black;
+        left:0%;
+        transform: rotate(0deg)
+    }
+    25%  {
+        background-color:yellow;
+        left:25%; 
+        transform: rotate(360deg)
+    }
+    50%  {
+        background-color:gold; 
+        left:50%;
+        padding: 30px;
+        font-size: 40px;
+    }
+    75%  {
+        background-color:goldenrod; 
+        left:75%; 
+        transform: rotate(0deg)
+    }
+    100% {
+        background-color:red; 
+        left:90%; 
+        transform: rotate(360deg)
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 95%;
+    background-color: rgb(204, 197, 197);
+    margin: 0 auto;
+}
+
+.image-wrap {
+    background-color: white;
+    border: 1px solid black;
+    width: 22%;
+    text-align: center;
+    margin: 10px;
+    height: 250px;
+}
+
+.image {
+    background-image: url(image/img.jpg);
+    background-size: cover;
+    border: 1px solid black;
+    width: 80%;
+    height: 200px;
+    margin: 10px auto;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .image-wrap {
+    background-color: white;
+    border: 1px solid black;
+    width: 35%;
+    text-align: center;
+    margin: 10px;
+    height: 250px; 
+    }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .image-wrap {
+        background-color: white;
+        border: 1px solid black;
+        width: 45%;
+        text-align: center;
+        margin: 10px;
+        height: 250px;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .image-wrap {
+        background-color: white;
+        border: 1px solid black;
+        width: 80%;
+        text-align: center;
+        margin: 10px;
+        height: 250px;
+    }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    .image-wrap {
+        background-color: white;
+        border: 1px solid black;
+        width: 95%;
+        text-align: center;
+        margin: 10px;
+        height: 250px;
+    }
+}
